@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart Home Dashboard</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <i class="fas fa-home active"> </i>
+      </div>
+      <div class="main-content">
+        <div class="nav">
+          <div>
+            <a class="active" href="#"> SmartHome Dashboard </a>
+          </div>
+        </div>
+        <div class="widgets">
+          <!-- Widget Bed Light 0 -->
+          <div class="widget bedLight-widget">
+            <div class="title">Đèn 0</div>
+            <div class="content-wrapper">
+              <div class="light-icon" id="bedLightIcon">
+                <img src="assets/imgs/tableLamp.png" alt="imgBedLights" />
+              </div>
+              <div class="status">OFF</div>
+            </div>
+          </div>
+          <!-- Widget Bed Light 1 -->
+          <div class="widget bedLight-widget">
+            <div class="title">Đèn 1</div>
+            <div class="content-wrapper">
+              <div class="light-icon" id="bedLightIcon">
+                <img src="assets/imgs/tableLamp.png" alt="imgBedLights" />
+              </div>
+              <div class="status">OFF</div>
+            </div>
+          </div>
+          <!-- Slider Widget 1 -->
+          <div class="widget apple-style">
+            <div class="widget-header">
+              <div class="icon">
+                <img src="assets/imgs/3dKitchenLight.png" alt="icon" />
+              </div>
+              <div class="widget-info">
+                <div class="widget-title">test 1</div>
+                <div class="widget-value">71%</div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider-track">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="71"
+                  class="brightness-slider"
+                />
+                <div class="slider-fill"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Slider Widget 2 -->
+          <div class="widget livingRoom-widget">
+            <div class="widget-header">
+              <div class="icon">
+                <img src="assets/imgs/FloorLamp.png" alt="icon" />
+              </div>
+              <div class="widget-info">
+                <div class="widget-title">test 2</div>
+                <div class="widget-valueLivingRoom">71%</div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider-track">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="71"
+                  class="brightness-sliderLivingRom"
+                />
+                <div class="slider-fill-livingRoom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

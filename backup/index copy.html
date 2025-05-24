@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <script src="https://www.unpkg.com/@eohjsc/era-widget@1.1.3/src/index.js"></script>
+    <title>Smart Home Dashboard</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <i class="fas fa-home active"> </i>
+        <!-- <i class="fas fa-bed"> </i>
+        <i class="fas fa-couch"> </i>
+        <i class="fas fa-utensils"> </i>
+        <i class="fas fa-cogs"> </i>
+        <i class="fas fa-bell"> </i>
+        <i class="fas fa-envelope"> </i>
+        <i class="fas fa-user"> </i> -->
+      </div>
+      <div class="main-content">
+        <div class="nav">
+          <div>
+            <a class="active" href="#"> HOME </a>
+            <!-- <a href="#"> NULL </a>
+            <a href="#"> NULL </a>
+            <a href="#"> NULL </a> -->
+          </div>
+
+          <!-- <div>
+            <i class="fas fa-search"> </i>
+            <i class="fas fa-comment-dots"> </i>
+            <i class="fas fa-pen"> </i>
+          </div> -->
+
+        </div>
+        <div class="widgets">
+          <!-- ################################################### -->
+          <!-- Widget Bed Light -->
+          <div class="widget bedLight-widget">
+            <div class="title">Đèn 0</div>
+            <div class="content-wrapper">
+              <div class="light-icon" id="bedLightIcon">
+                <img src="assets/imgs/tableLamp.png" alt="imgBedLights" />
+              </div>
+              <div class="status">OFF</div>
+            </div>
+          </div>
+          <!-- Widget Bed Light -->
+          <div class="widget bedLight-widget">
+            <div class="title">Đèn 1</div>
+            <div class="content-wrapper">
+              <div class="light-icon" id="bedLightIcon">
+                <img src="assets/imgs/tableLamp.png" alt="imgBedLights" />
+              </div>
+              <div class="status">OFF</div>
+            </div>
+          </div>
+          <!-- ################################################### -->
+          <div class="widget apple-style">
+            <div class="widget-header">
+              <div class="icon">
+                <img src="assets/imgs/3dKitchenLight.png" alt="icon" />
+              </div>
+              <div class="widget-info">
+                <div class="widget-title">test 1</div>
+                <div class="widget-value">71%</div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider-track">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="71"
+                  class="brightness-slider"
+                />
+                <div class="slider-fill"></div>
+              </div>
+            </div>
+          </div>
+          <!-- ################################################### -->
+          <div class="widget livingRoom-widget">
+            <div class="widget-header">
+              <div class="icon">
+                <img src="assets/imgs/FloorLamp.png" alt="icon" />
+              </div>
+              <div class="widget-info">
+                <div class="widget-title">test 2</div>
+                <div class="widget-valueLivingRoom">71%</div>
+              </div>
+            </div>
+            <!-- ################################################### -->
+            <div class="slider-container">
+              <div class="slider-track">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="71"
+                  class="brightness-sliderLivingRom"
+                />
+                <div class="slider-fill-livingRoom"></div>
+              </div>
+            </div>
+          </div>
+          <!-- ################################################### -->
+          <!-- <div class="widget humidifier-widget">
+            <div class="title">Humidity</div>
+            <div class="gauge humidifier neon" style="--value: 68">
+              <div class="dial"></div>
+              <div class="fill"></div>
+              <div class="value">68%</div>
+            </div>
+            <div class="controls">
+              <button class="active">
+                <i class="fas fa-tint"></i>
+              </button>
+              <button>
+                <i class="fas fa-power-off"></i>
+              </button>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div class="widget temp-widget">
+            <div class="title">Temperature</div>
+            <div class="gauge temp neon" style="--value: 72">
+              <div class="dial"></div>
+              <div class="fill"></div>
+              <div class="value">72%</div>
+            </div>
+            <div class="controls">
+              <button class="active">
+                <i class="fas fa-tint"></i>
+              </button>
+              <button>
+                <i class="fas fa-power-off"></i>
+              </button>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div class="widget weather-widget">
+            <div class="weather-header">
+              <div class="weather-main">
+                <h1 class="weather-title">Weather</h1>
+                <div class="weather-subtitle">Sunday</div>
+                <div class="weather-temp">14.6°C</div>
+              </div>
+            </div>
+            
+            <div class="canvas-container" id="weather-canvas">
+              <div class="iconWeather">
+                <img src="assets/imgs/rainy.png" alt="icon" />
+              </div>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div class="widget music-widget">
+            <div class="title-musicWidget">Music Player</div>
+            <div class="subtitle-musicWidget">Docked</div>
+            <div class="player-musicWidget">
+              <div class="albumArt-musicWidget">
+                <img
+                  src="assets/imgs/beeriu.jfif"
+                  alt="Album Art"
+                  class="albumCover-musicWidget"
+                />
+                <div class="vinylRecord-musicWidget">
+                  <div class="vinylRing-musicWidget"></div>
+                  <img
+                    src="assets/imgs/beeriu.jfif"
+                    alt="Vinyl Art"
+                    class="vinylArt-musicWidget"
+                  />
+                </div>
+              </div>
+              <div class="songInfo-musicWidget">
+                <span class="songTitle-musicWidget">Thiên Lý Ơi</span>
+                <span class="artistName-musicWidget">Jack J97</span>
+              </div>
+              <div class="progressBar-musicWidget">
+                <div class="progress-musicWidget"></div>
+              </div>
+              <div class="duration-musicWidget">0:00 / 4:33</div>
+            </div>
+            <div class="controls-musicWidget">
+              <button class="previousButton-musicWidget">
+                <i class="fas fa-backward"></i>
+              </button>
+              <button class="playButton-musicWidget">
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="stopButton-musicWidget">
+                <i class="fas fa-stop"></i>
+              </button>
+              <button class="nextButton-musicWidget">
+                <i class="fas fa-forward"></i>
+              </button>
+              <button class="settingsButton-musicWidget">
+                <i class="fas fa-cog"></i>
+              </button>
+            </div>
+            <div class="playlist-musicWidget">
+              <div class="playlist-header">
+                <span class="playlist-title">Playlist</span>
+                <span class="playlist-subtitle"
+                  >3,151,180 likes • 3 hr 47 min</span
+                >
+              </div>
+
+              <div class="playlist-items">
+                <div class="playlist-item active">
+                  <span class="track-time">4:33</span>
+                  <div class="track-info">
+                    <span class="track-title">Thiên Lý Ơi</span>
+                    <span class="track-artist">Jack</span>
+                  </div>
+                </div>
+
+                <div class="playlist-item">
+                  <span class="track-time">4:15</span>
+                  <div class="track-info">
+                    <span class="track-title">Reeves</span>
+                    <span class="track-artist">HIEUTHUHAI- MANBO</span>
+                  </div>
+                </div>
+
+                <div class="playlist-item">
+                  <span class="track-time">2:32</span>
+                  <div class="track-info">
+                    <span class="track-title">1000 Ánh mắt</span>
+                    <span class="track-artist">Shiki</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <audio id="audioPlayer" src="assets/audio/thienlyoi.mp3"></audio>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div class="widget chart-container">
+            <div class="chart-title">Humidity & Temperature Statistics</div>
+            <canvas id="dataChart"></canvas>
+            <div class="chart-controls">
+              <button class="time-range active" data-minutes="0">Live</button>
+              <button class="time-range" data-minutes="5">Analyze data</button>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div class="widget airConditioner">
+            <div class="header">
+              <div class="title-">Air Conditioner</div>
+            </div>
+            <div class="ac-image">
+              <img
+                src="assets/imgs/airConditioner.png"
+                alt="Air Conditioner Unit"
+              />
+            </div>
+            <div class="main-controls">
+              <div class="temperature-control">
+                <div class="temperature-gauge">
+                  <div class="gauge-ticks"></div>
+                  <div class="gauge-track"></div>
+                  <div class="gauge-fill-wrapper">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-dot"></div>
+                  </div>
+
+                  <div class="temperature-wrapper">
+                    <div class="temperature-value">69</div>
+                    <div class="temperature-unit">°C</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="temp-controls">
+                <button class="temp-button decrease">-</button>
+                <button class="temp-button increase">+</button>
+              </div>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+          <!-- <div id="statsModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Thống kê dữ liệu</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Thời gian</th>
+                    <th>Humidity</th>
+                    <th>Temp</th>
+                  </tr>
+                </thead>
+                <tbody id="statsTableBody"></tbody>
+              </table>
+            </div>
+          </div> -->
+          <!-- ################################################### -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</html>
