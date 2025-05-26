@@ -2043,6 +2043,34 @@ body {
     font-size: 16px;
     padding: 6px 12px;
   }
+
+  .widget.bedLight-widget {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .widget.bedLight-widget .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .widget.bedLight-widget .light-icon {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  .widget.bedLight-widget .light-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .widget.bedLight-widget .status {
+    font-size: 20px;
+    padding: 8px 20px;
+    bottom: 40px;
+  }
 }
 
 /* Small Mobile Devices */
@@ -2079,5 +2107,23 @@ body {
   .light-icon {
     width: 80px;
     height: 80px;
+  }
+
+  .widget.bedLight-widget {
+    min-height: 280px;
+  }
+
+  .widget.bedLight-widget .light-icon {
+    width: 130px;
+    height: 130px;
+  }
+
+  .widget.bedLight-widget .title {
+    font-size: 22px;
+  }
+
+  .widget.bedLight-widget .status {
+    font-size: 18px;
+    padding: 6px 16px;
   }
 }
