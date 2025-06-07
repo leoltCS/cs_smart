@@ -21,6 +21,7 @@ sliderLivingRoom.addEventListener("input", function () {
   valueLivingRoom.textContent = value + "%";
 });
 
+// 
 // Widget Bed Light 0
 const widget0 = document.querySelector(".bedLight-widget:nth-child(1) .light-icon");
 const status0 = document.querySelector(".bedLight-widget:nth-child(1) .status");
